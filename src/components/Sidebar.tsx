@@ -3,7 +3,7 @@ import { LuLayoutDashboard } from "react-icons/lu";
 export default function Sidebar() {
     return (
         <div className="flex items-center">
-            <div className="w-[4em] h-[calc(100vh-3em)] bg-[#262a2f] border-r border-[#32383e] flex flex-col items-center py-5">
+            <div className="w-[4em] h-[calc(100vh-3em)] bg-[#212529] border-r border-[#32383e] flex flex-col items-center py-5">
                 <div>
                     <ul>
                         <li className="">
@@ -14,7 +14,11 @@ export default function Sidebar() {
                     </ul>
                 </div>
             </div>
-            <div className="w-[15em] h-[calc(100vh-3em)] bg-[#262a2f]"></div>
+            <div className="w-[15em] h-[calc(100vh-3em)] bg-[#212529]">
+                <div>
+                    <span>My Workspace > History</span>
+                </div>
+            </div>
         </div>
     );
 }

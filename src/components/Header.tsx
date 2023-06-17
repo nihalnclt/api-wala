@@ -6,7 +6,7 @@ import {
 
 export default function Header() {
     return (
-        <div className="bg-[#262a2f] h-[3em] border-b border-[#32383e] flex items-center justify-between px-5">
+        <div className="bg-[#212529] h-[3em] border-b border-[#32383e] flex items-center justify-between px-5">
             <div>
                 <h1 className="font-bold text-white text-[17px]">
                     API <span className="text-rose-500">WALA</span>

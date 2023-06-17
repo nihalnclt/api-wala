@@ -16,20 +16,29 @@ export default function HomePageTabs() {
     const dispatch = useDispatch();
 
     return (
-        <div className="flex items-center gap-2 w-[100%]">
+        <div className="flex items-center w-[100%] h-[100%] border-b border-[#32383e]">
             {activeRequests?.map((item, index) => {
                 return (
                     <div
                         key={index}
                         className={
-                            "max-w-[200px] h-[30px] rounded-lg flex items-center gap-[10px] p-2 text-[12px] cursor-pointer " +
+                            "max-w-[200px] h-[100%] flex items-center gap-[10px] px-2 text-[12px] cursor-pointer border-r border-[#32383e] " +
                             (selectedTab === index
-                                ? "bg-[#32383e] text-white"
-                                : "bg-[#262a2f] text-gray-300")
+                                ? "bg-[#212529] text-white border-b border-b-rose-500"
+                                : "bg-[#262a2f] text-[#878a99]")
                         }
                         onClick={() => dispatch(setSelectedTab(index))}
                     >
-                        <span className="text-[12px] text-green-500">{item?.method}</span>
+                        <span
+                            className={
+                                "text-[12px] " +
+                                (selectedTab === index
+                                    ? "text-green-500"
+                                    : "text-[#878a99]")
+                            }
+                        >
+                            {item?.method}
+                        </span>
                         <span>{item?.requestName || "Untitled"}</span>
                         <span
                             onClick={(e) => {
